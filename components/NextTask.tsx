@@ -5,6 +5,7 @@ import { useEffect, useState } from "react"
 import Loader from "./Loader/Loader";
 import { useBalance } from "@/utils/balanceContext";
 import { toast } from "react-toastify";
+import { useWallet } from "@solana/wallet-adapter-react";
 
 
 interface Task {
@@ -22,9 +23,14 @@ export const NextTask = () => {
     const [currentTask, setCurrentTask] = useState<Task | null>(null);
     const [loading, setLoading] = useState(true);
     const { balance, setBalance } = useBalance()
+    const { publicKey, signMessage } = useWallet();
+
     const [end, setEnd] = useState("")
     async function getCurrentTask() {
         try {
+            if(!publicKey || !localStorage.getItem("token")){
+                toast("connect to your solana devnet wallet account to sign in")
+            }
             setEnd("")
             setLoading(true)
             const response = await axios.get(`${BACKEND_URL}/v1/worker/nextTask`, {

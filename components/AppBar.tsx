@@ -33,7 +33,7 @@ export const AppBar = () => {
 
     async function sendPayment() {
         if (!localStorage.getItem("token") || !publicKey) {
-            toast("Please signin")
+            toast("connect to your solana devnet wallet account to sign in")
         } else {
             if (balance == 0) {
                 toast("You don't have any pending amount.")
