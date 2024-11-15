@@ -1,7 +1,6 @@
 import { AppBar } from '@/components/AppBar';
 import Hero from '@/components/Hero';
 import { NextTask } from '@/components/NextTask';
-import { Upload } from '@/components/Upload';
 
 import Image from "next/image";
 
