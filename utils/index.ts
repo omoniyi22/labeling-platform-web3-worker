@@ -1,2 +1,5 @@
-export const BACKEND_URL = "localhost:3000";
-export const CLOUDFRONT_URL = "https:/d2szwvl7yo497w.cloudfront.net"
+import dotenv from "dotenv"
+dotenv.config()
+
+export const BACKEND_URL = process.env.NEXT_PUBLIC_BACKEND_URL
+export const CLOUDFRONT_URL = process.env.NEXT_PUBLIC_CLOUDFRONT_URL

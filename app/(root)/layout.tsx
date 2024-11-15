@@ -50,8 +50,7 @@ export default function RootLayout({
               {children}
             </WalletModalProvider>
           </WalletProvider>
-      <ToastContainer />
-
+          <ToastContainer />
         </ConnectionProvider>
       </BalanceProvider>
     </div>

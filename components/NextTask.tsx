@@ -87,7 +87,7 @@ export const NextTask = () => {
     if (!loading && !currentTask?.title)
         return (
             <div className="text-center justify-center mt-10">
-                {end ? end : "Not Task Found"},   <div></div>
+                {end ? `${"No more task left to review"}.` : "Not Task Found"}   <div></div>
                 <button onClick={getCurrentTask} className='mt-4 small text-white bg-gray-800 hover:bg-gray-900 focus:outline-none focus:ring-4
         focus:ring-gray-300 font-medium rounded-full ml-1 text-xs px-2.5 py-1.5 me-2 mb-2 dark:bg-gray-800
         dark:hover:bg-gray-700 dark:focus:ring-gray-700 dark:border-gray-700'> {end ? "Check Again" : "Try Again"}</button>
@@ -123,9 +123,9 @@ function Option({ imageUrl, key, onSelect }: {
     return (
         <>
             <div className="relative group  pb-0 bg-gray-700 cursor-pointer shadow-xl border-gray-700 border max-w-fit  overflow-hidden rounded-lg">
-                <img src={imageUrl} className="object-cover h-32 w-44  rounded-md p-1 border my-5 mx-auto mx-8 mb-1 " />
+                <img src={imageUrl} className="object-cover h-32 w-44  rounded-md p-1 border my-5  mx-8 mb-1  " />
                 <div onClick={onSelect} className="flex justify-center mt-3 border-t white bg-white border-gray-700 py-1 shadow-lg cursor-pointer">
-                    Select
+                    select
                 </div>
             </div>
         </>
