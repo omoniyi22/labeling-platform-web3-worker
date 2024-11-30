@@ -91,7 +91,7 @@ export const AppBar = () => {
     return (
         <>
             <div className=' bg-white flex justify-between pb-2 pt-2 shadow-md'>
-                <div className="text-2xl pl-4 ml-4 mt-2 flex justify-center font-bold ">Labelfy- <span className='italic'> Worker </span></div>
+                <div className="text-2xl pl-4 ml-4 mt-2 flex justify-center font-bold ">Labelfy <span className=''> Worker </span></div>
                 <div className="text-xl pr-4 flex">
                     <button onClick={sendPayment} className='mt-1 text-white bg-gray-800 hover:bg-gray-900 focus:outline-none focus:ring-4
                 focus:ring-gray-300 font-medium rounded-full text-sm px-5 py-2.5 me-2 mb-2 dark:bg-gray-800
